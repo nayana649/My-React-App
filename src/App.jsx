@@ -1,7 +1,8 @@
 import React from 'react';
 import HelloWorld from './HelloWorld';
 import Counter from './Counter';
-import TextMirror from './TextMirror'; // 1. Imported Program 3
+import TextMirror from './TextMirror';
+import ToggleBox from './ToggleBox'; // 1. Imported Program 4
 
 function App() {
   return (
@@ -18,8 +19,12 @@ function App() {
 
       <hr style={{ border: '1px solid #dcdde1', margin: '30px 0' }} />
 
-      {/* 2. Display Program 3 */}
       <TextMirror />
+
+      <hr style={{ border: '1px solid #dcdde1', margin: '30px 0' }} />
+
+      {/* 2. Display Program 4 */}
+      <ToggleBox />
       
     </div>
   );
