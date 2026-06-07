@@ -1,6 +1,7 @@
 import React from 'react';
 import HelloWorld from './HelloWorld';
 import Counter from './Counter';
+import TextMirror from './TextMirror'; // 1. Imported Program 3
 
 function App() {
   return (
@@ -9,13 +10,16 @@ function App() {
       <p style={{ textAlign: 'center', color: '#7f8c8d' }}>Tracking my progress line by line</p>
       <hr style={{ border: '1px solid #dcdde1', margin: '20px 0' }} />
 
-      {/* Program 1: Static Component */}
       <HelloWorld />
 
       <hr style={{ border: '1px solid #dcdde1', margin: '30px 0' }} />
 
-      {/* Program 2: State Component */}
       <Counter />
+
+      <hr style={{ border: '1px solid #dcdde1', margin: '30px 0' }} />
+
+      {/* 2. Display Program 3 */}
+      <TextMirror />
       
     </div>
   );
