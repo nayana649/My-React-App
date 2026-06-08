@@ -4,7 +4,8 @@ import HelloWorld from './HelloWorld';
 import Counter from './Counter';
 import TextMirror from './TextMirror';
 import ToggleBox from './ToggleBox';
-import TodoList from './TodoList'; // 1. IMPORT PROGRAM 5 AT THE TOP
+import TodoList from './TodoList'; 
+import TeamPage from './TeamPage';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
           <Link to="/counter" style={linkStyle}>Counter</Link>
           <Link to="/mirror" style={linkStyle}>Text Mirror</Link>
           <Link to="/toggle" style={linkStyle}>Toggle Switch</Link>
-          <Link to="/todo" style={linkStyle}>Todo List</Link> {/* Added Nav Link */}
+          <Link to="/todo" style={linkStyle}>Todo List</Link> 
+          <Link to="/team" style={linkStyle}>Props Team</Link>
         </nav>
 
         <hr style={{ border: '1px solid #dcdde1', margin: '20px 0' }} />
@@ -33,6 +35,7 @@ function App() {
             
             {/* 2. ADD THE ROUTE MAP RULE HERE */}
             <Route path="/todo" element={<TodoList />} />
+            <Route path="/team" element={<TeamPage />} />
             
             <Route path="*" element={<div style={{ textAlign: 'center' }}><h2>404 Page</h2></div>} />
           </Routes>
