@@ -6,6 +6,7 @@ import TextMirror from './TextMirror';
 import ToggleBox from './ToggleBox';
 import TodoList from './TodoList'; 
 import TeamPage from './TeamPage';
+import ParentController from './ParentController';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Link to="/toggle" style={linkStyle}>Toggle Switch</Link>
           <Link to="/todo" style={linkStyle}>Todo List</Link> 
           <Link to="/team" style={linkStyle}>Props Team</Link>
+          <Link to="/parent" style={linkStyle}>Parent</Link>
         </nav>
 
         <hr style={{ border: '1px solid #dcdde1', margin: '20px 0' }} />
@@ -36,7 +38,7 @@ function App() {
             {/* 2. ADD THE ROUTE MAP RULE HERE */}
             <Route path="/todo" element={<TodoList />} />
             <Route path="/team" element={<TeamPage />} />
-            
+            <Route path="/parent" element={<ParentController />} />
             <Route path="*" element={<div style={{ textAlign: 'center' }}><h2>404 Page</h2></div>} />
           </Routes>
         </div>
