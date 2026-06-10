@@ -8,6 +8,7 @@ import TodoList from './TodoList';
 import TeamPage from './TeamPage';
 import ParentController from './ParentController';
 import UserList from './UserList';
+import ConditionalRender from './ConditionalRender';
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
           <Link to="/todo" style={linkStyle}>Todo List</Link> 
           <Link to="/team" style={linkStyle}>Props Team</Link>
           <Link to="/parent" style={linkStyle}>Parent</Link>
-          <link to="/users" style={linkStyle}>User List</link>
+          <Link to="/users" style={linkStyle}>User List</Link>
+          <Link to="/conditional" style={linkStyle}>Conditional Render</Link>
         </nav>
 
         <hr style={{ border: '1px solid #dcdde1', margin: '20px 0' }} />
@@ -42,6 +44,7 @@ function App() {
             <Route path="/team" element={<TeamPage />} />
             <Route path="/parent" element={<ParentController />} />
             <Route path="/users" element={<UserList />} />
+            <Route path="/conditional" element={<ConditionalRender />} />
             <Route path="*" element={<div style={{ textAlign: 'center' }}><h2>404 Page</h2></div>} />
           </Routes>
         </div>
