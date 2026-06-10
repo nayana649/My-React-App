@@ -7,6 +7,7 @@ import ToggleBox from './ToggleBox';
 import TodoList from './TodoList'; 
 import TeamPage from './TeamPage';
 import ParentController from './ParentController';
+import UserList from './UserList';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Link to="/todo" style={linkStyle}>Todo List</Link> 
           <Link to="/team" style={linkStyle}>Props Team</Link>
           <Link to="/parent" style={linkStyle}>Parent</Link>
+          <link to="/users" style={linkStyle}>User List</link>
         </nav>
 
         <hr style={{ border: '1px solid #dcdde1', margin: '20px 0' }} />
@@ -39,6 +41,7 @@ function App() {
             <Route path="/todo" element={<TodoList />} />
             <Route path="/team" element={<TeamPage />} />
             <Route path="/parent" element={<ParentController />} />
+            <Route path="/users" element={<UserList />} />
             <Route path="*" element={<div style={{ textAlign: 'center' }}><h2>404 Page</h2></div>} />
           </Routes>
         </div>
