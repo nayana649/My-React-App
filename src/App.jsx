@@ -10,6 +10,7 @@ import ParentController from './ParentController';
 import UserList from './UserList';
 import ConditionalRender from './ConditionalRender';
 import SimpleForm from './SimpleForm';
+import ApiFetcher from './ApiFetcher';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Link to="/users" style={linkStyle}>User List</Link>
           <Link to="/conditional" style={linkStyle}>Conditional Render</Link>
           <Link to="/form" style={linkStyle}>Simple Form</Link>
+          <Link to="/api" style={linkStyle}>API Fetcher</Link>
         </nav>
 
         <hr style={{ border: '1px solid #dcdde1', margin: '20px 0' }} />
@@ -45,6 +47,7 @@ function App() {
             <Route path="/parent" element={<ParentController />} />
             <Route path="/users" element={<UserList />} />
             <Route path="/conditional" element={<ConditionalRender />} />
+            <Route path="/api" element={<ApiFetcher />} />
             
             {/* FIXED: Changed <React to <Route */}
             <Route path="/form" element={<SimpleForm />} />
