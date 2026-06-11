@@ -9,6 +9,7 @@ import TeamPage from './TeamPage';
 import ParentController from './ParentController';
 import UserList from './UserList';
 import ConditionalRender from './ConditionalRender';
+import SimpleForm from './SimpleForm';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Link to="/parent" style={linkStyle}>Parent</Link>
           <Link to="/users" style={linkStyle}>User List</Link>
           <Link to="/conditional" style={linkStyle}>Conditional Render</Link>
+          <Link to="/form" style={linkStyle}>Simple Form</Link>
         </nav>
 
         <hr style={{ border: '1px solid #dcdde1', margin: '20px 0' }} />
@@ -38,13 +40,15 @@ function App() {
             <Route path="/counter" element={<Counter />} />
             <Route path="/mirror" element={<TextMirror />} />
             <Route path="/toggle" element={<ToggleBox />} />
-            
-            {/* 2. ADD THE ROUTE MAP RULE HERE */}
             <Route path="/todo" element={<TodoList />} />
             <Route path="/team" element={<TeamPage />} />
             <Route path="/parent" element={<ParentController />} />
             <Route path="/users" element={<UserList />} />
             <Route path="/conditional" element={<ConditionalRender />} />
+            
+            {/* FIXED: Changed <React to <Route */}
+            <Route path="/form" element={<SimpleForm />} />
+            
             <Route path="*" element={<div style={{ textAlign: 'center' }}><h2>404 Page</h2></div>} />
           </Routes>
         </div>
